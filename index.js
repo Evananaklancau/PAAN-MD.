@@ -13,10 +13,10 @@ const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
 /////////////////
-const BotName = 'REUZ BOT☄'; 
+const BotName = 'PANZBOT☄'; 
 const instagram = 'https://instagram.com/reuz.id'; 
 const telegram = 'https://t.me/reuzzz'; 
-const kapanbotaktif = 'KETIKA HANYA DIAKTIFKAN'; 
+const kapanbotaktif = 'AKTIF TERUS😋'; 
 const youtube = 'https://www.youtube.com/c/reuz_id';
 //const grupch1 = 'belum ada grup'; 
 //const grupch2 = 'belum ada grup' ; 
@@ -64,7 +64,7 @@ fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 //conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
-conn.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log('Bot by ig:@reuz.id')
+conn.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log('Bot by ig:@panz.id')
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
@@ -99,29 +99,29 @@ conn.sendMessage(group.gid, "Halo semua!!!", MessageType.extendedText) // say he
 
 }
 //chat
-if (text == 'halo')
+if (text == 'HALO KAK')
 {
-conn.sendMessage(id, tambahan.halo ,MessageType.text);
+conn.sendMessage(id, tambahan.HALO KAK ,MessageType.text);
 }
-else if (text == 'hai')
+else if (text == 'HAI KAK')
 {
-conn.sendMessage(id, tambahan.hai ,MessageType.text);
+conn.sendMessage(id, tambahan.HAI KAK ,MessageType.text);
 }
-else if (text == 'assalamualaikum')
+else if (text == 'ASSALAMUALAIKUM KAK')
 {
-conn.sendMessage(id, tambahan.ass ,MessageType.text);
+conn.sendMessage(id, tambahan.ASS ,MessageType.text);
 }
-else if (text == 'bro')
+else if (text == 'KAK')
 {
-conn.sendMessage(id, tambahan.bro ,MessageType.text);
+conn.sendMessage(id, tambahan.KAK ,MessageType.text);
 }
-else if (text == 'p')
+else if (text == 'PEE')
 {
-conn.sendMessage(id, tambahan.p ,MessageType.text);
+conn.sendMessage(id, tambahan.PEE ,MessageType.text);
 }
-else if (text == 'test')
+else if (text == 'TEST')
 {
-  conn.sendMessage(id, tambahan.test, MessageType.text);
+  conn.sendMessage(id, tambahan.TEST, MessageType.text);
 }
 else if (text == 'HALO')
 {
@@ -180,12 +180,12 @@ console.log(exists);
 conn.sendMessage(id ,`nomor hp ${gg} ${exists ? " tersedia " : " tidak tersedia"} di whatsapp`, MessageType.text)
 }
 
-if (text.includes("!say")){
+if (text.includes(".say")){
   const teks = text.replace(/!say /, "")
 conn.sendMessage(id, teks, MessageType.text)
 }
 
-if (text.includes("!nulis")){
+if (text.includes(".nulis")){
   const teks = text.replace(/!nulis /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/nulis?text=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
     let hasil = `Silahkan download hasil dibawah ini agar hasilnya lebih bagus! 👌\n\n${res.data.result}`;
@@ -193,7 +193,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/nulis?text=${teks}&apiKey=zFuV88pxc
 })
 }
 
-if (text.includes("!ytmp3")){
+if (text.includes(".ytmp3")){
 const teks = text.replace(/!ytmp3 /, "")
 axios.get(`https://st4rz.herokuapp.com/api/yta?url=${teks}`).then((res) => {
     let hasil = `Audio telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\nUkuran audio: ${res.data.filesize}\n\nLink: ${res.data.result}`;
@@ -201,7 +201,7 @@ axios.get(`https://st4rz.herokuapp.com/api/yta?url=${teks}`).then((res) => {
 })
 }
 
-if (text.includes("!yt")){
+if (text.includes(".yt")){
 const teks = text.replace(/!yt /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
     let hasil = `Video telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\nUkuran video: ${res.data.filesize}\n\nLink: ${res.data.result}`;
@@ -209,7 +209,7 @@ axios.get(`https://st4rz.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
 })
 }
 
-if (text.includes("!fb")){
+if (text.includes(".fb")){
 const teks = text.replace(/!fb /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/epbe?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
     let hasil = `Berhasil! silahkan klik link di bawah untuk mendownload hasilnya!\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\nUkuran: ${res.data.filesize}\n\nLink: ${res.data.result}`;
@@ -217,7 +217,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/epbe?url=${teks}&apiKey=zFuV88p
 })
 }
 
-if (text.includes("!ig")){
+if (text.includes(".ig")){
 const teks = text.replace(/!ig /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ig?url=${teks}`).then((res) => {
     let hasil = `Berhasil! silahkan klik link di bawah untuk mendownload hasilnya!\n👇👇👇👇👇👇👇👇👇\n\nUkuran: ${res.data.filesize}\n\nLink: ${res.data.result}`;
@@ -225,28 +225,28 @@ axios.get(`https://st4rz.herokuapp.com/api/ig?url=${teks}`).then((res) => {
 })
 }
 
-if (text.includes("!twt")){
+if (text.includes(".twt")){
 const teks = text.replace(/!twt /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
     let hasil = `Berhasil! silahkan klik link di bawah untuk mendownload hasilnya!\n👇👇👇👇👇👇👇👇👇\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("!tiktok")) {
+if (text.includes(".tiktok")) {
 const tictoc = text.replace(/!tiktok /, "")
 axios.get(`https://st4rz.herokuapp.com/api/tiktok?url=${tictoc}`).then((res) => {
      let titoe = `Berhasil!!! Silahkan klik link dibawah ini untuk mendownload hasilnya! \n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.deskripsi} \n\nDurasi: ${res.data.durasi}\n\nNama: ${res.data.nama}\n\nUrl: ${res.data.urlvideo}`;
 conn.sendMessage(id, titoe, MessageType.text);
 })
 }
-if (text.includes("!wikia")){
+if (text.includes(".wikia")){
 const teks = text.replace(/!wikia /, "")
 axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${text}`).then((res) => {
     let hasil = `Menurut Wikipedia:\n\n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("!sholat")){
+if (text.includes(".sholat")){
   const teks = text.replace(/!sholat /, "")
   axios.get(`https://mhankbarbar.herokuapp.com/api/jadwalshalat?daerah=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then ((res) =>{
   let hasil = `Jadwal sholat di ${teks} hari ini adalah\n\n👉Imsyak : ${res.data.Imsyak}\n👉Subuh : ${res.data.Subuh} WIB\n👉Dzuhur : ${res.data.Dzuhur}WIB\n👉Ashar : ${res.data.Ashar} WIB\n👉Maghrib : ${res.data.Maghrib}\n👉Isya : ${res.data.Isya} WIB\n👉Tengah malam : ${res.data.Dhuha} WIB`;
