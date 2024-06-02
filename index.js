@@ -101,19 +101,19 @@ conn.sendMessage(group.gid, "Halo semua!!!", MessageType.extendedText) // say he
 //chat
 if (text == 'HALO KAK')
 {
-conn.sendMessage(id, tambahan.HALO KAK ,MessageType.text);
+conn.sendMessage(id, tambahan.HALO ,MessageType.text);
 }
-else if (text == 'HAI KAK')
+else if (text == 'HAI')
 {
-conn.sendMessage(id, tambahan.HAI KAK ,MessageType.text);
+conn.sendMessage(id, tambahan.HAI ,MessageType.text);
 }
 else if (text == 'ASSALAMUALAIKUM KAK')
 {
 conn.sendMessage(id, tambahan.ASS ,MessageType.text);
 }
-else if (text == 'KAK')
+else if (text == 'Bro')
 {
-conn.sendMessage(id, tambahan.KAK ,MessageType.text);
+conn.sendMessage(id, tambahan.Bro ,MessageType.text);
 }
 else if (text == 'PEE')
 {
